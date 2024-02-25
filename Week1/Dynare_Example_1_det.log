@@ -1,0 +1,34 @@
+Starting Dynare (version 5.0).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 2 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 1).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+STEADY-STATE RESULTS:
+
+x 		 0
+y 		 0
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+             0.3             -0.3                0
+             0.5              0.5                0
+
+
+There are 0 eigenvalue(s) larger than 1 in modulus 
+for 0 forward-looking variable(s)
+
+The rank condition is verified.
+
+Perfect foresight solution found.
+
+Perfect foresight solution found.
+
+Total computing time : 0h00m20s
