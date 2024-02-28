@@ -36,7 +36,6 @@ parameters
 // ---------------
 
 rhoxx = 0.5;//stable
-% rhoxx = 1.5;//unstable
 rhoxy = -0.05;
 rhoxz = 0.2;
 rhoyx = 0.2; 
@@ -45,6 +44,11 @@ rhoyz = 0.2;
 rhozx = 0.1;
 rhozy = 0.1;
 rhozz = 0.1;
+
+% rhoxx = 1.5;//unstable
+// check eigen values 
+// STABLE: eig([0.5 -0.05 0.2; 0.2 -0.3 0.2; 0.1 0.1 0.1])
+// UNSTABLE: eig([1.5 -0.05 0.2; 0.2 -0.3 0.2; 0.1 0.1 0.1])
 
 
 // ===============

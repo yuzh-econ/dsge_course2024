@@ -156,7 +156,7 @@ M_.NNZDerivatives = [15; -1; -1; ];
 M_.static_tmp_nbr = [0; 0; 0; 0; ];
 M_.model_local_variables_static_tt_idxs = {
 };
-M_.params(1) = 1.5;
+M_.params(1) = 0.5;
 rhoxx = M_.params(1);
 M_.params(2) = (-0.05);
 rhoxy = M_.params(2);

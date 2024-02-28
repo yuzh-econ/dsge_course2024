@@ -19,13 +19,69 @@ z 		 0
 EIGENVALUES:
          Modulus             Real        Imaginary
 
-          0.1276           0.1276                0
-          0.3375          -0.3375                0
-            1.51             1.51                0
+         0.08419          0.08419                0
+          0.3278          -0.3278                0
+          0.5436           0.5436                0
 
 
-There are 1 eigenvalue(s) larger than 1 in modulus 
+There are 0 eigenvalue(s) larger than 1 in modulus 
 for 0 forward-looking variable(s)
 
-The rank condition ISN'T verified!
+The rank condition is verified.
 
+
+MODEL SUMMARY
+
+  Number of variables:         3
+  Number of stochastic shocks: 3
+  Number of state variables:   3
+  Number of jumpers:           0
+  Number of static variables:  0
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables          ex        ey        ez
+ex           1.000000  0.000000  0.000000
+ey           0.000000  1.000000  0.000000
+ez           0.000000  0.000000  1.000000
+
+POLICY AND TRANSITION FUNCTIONS
+                                   x               y               z
+x(-1)                       0.500000        0.200000        0.100000
+y(-1)                      -0.050000       -0.300000        0.100000
+z(-1)                       0.200000        0.200000        0.100000
+ex                          1.000000               0               0
+ey                                 0        1.000000               0
+ez                                 0               0        1.000000
+
+
+THEORETICAL MOMENTS
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+x              0.0000     1.1862     1.4071
+y              0.0000     1.0905     1.1892
+z              0.0000     1.0210     1.0424
+
+
+
+VARIANCE DECOMPOSITION (in percent)
+         ex      ey      ez
+x     95.69    0.19    4.12
+y      3.94   92.60    3.46
+z      1.80    1.03   97.17
+
+
+
+MATRIX OF CORRELATIONS
+Variables         x       y       z
+x            1.0000  0.1421  0.0832
+y            0.1421  1.0000  0.0138
+z            0.0832  0.0138  1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order          1       2       3       4       5
+x         0.5078  0.2692  0.1470  0.0796  0.0433
+y        -0.2665  0.1093 -0.0249  0.0140 -0.0014
+z         0.1111  0.0574  0.0200  0.0135  0.0064
+Total computing time : 0h00m07s
