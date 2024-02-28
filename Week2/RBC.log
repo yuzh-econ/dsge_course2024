@@ -1,0 +1,135 @@
+Starting Dynare (version 5.0).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 28 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 1).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+STEADY-STATE RESULTS:
+
+U      		 -0.61174
+UC     		 0.907345
+UH     		 -1.69657
+LAMBDA 		 0.99
+R      		 1.0101
+RK     		 1.0101
+C      		 0.560945
+W      		 1.86982
+H      		 0.35
+Y      		 0.934908
+K      		 9.25559
+I      		 0.186982
+A      		 1
+G      		 0.186982
+tax    		 0.285714
+X      		 1
+Q      		 1
+Z1     		 0
+KY     		 9.9
+IY     		 0.2
+CY     		 0.6
+RR     		 1
+YY     		 1
+CC     		 1
+HH     		 1
+WW     		 1
+II     		 1
+KK     		 1
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+       6.785e-17       -6.785e-17                0
+       1.662e-16       -1.662e-16                0
+            0.75             0.75                0
+            0.75             0.75                0
+           0.782            0.782                0
+          0.9652           0.9652                0
+           1.047            1.047                0
+           1.292            1.292                0
+        2.91e+16         2.91e+16                0
+             Inf              Inf                0
+
+
+There are 4 eigenvalue(s) larger than 1 in modulus 
+for 4 forward-looking variable(s)
+
+The rank condition is verified.
+
+
+MODEL SUMMARY
+
+  Number of variables:         28
+  Number of stochastic shocks: 2
+  Number of state variables:   6
+  Number of jumpers:           4
+  Number of static variables:  19
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables        epsA      epsG
+epsA         1.000000  0.000000
+epsG         0.000000  1.000000
+
+POLICY AND TRANSITION FUNCTIONS
+                                  YY              CC              II              HH              WW              RR               Q
+Constant                    1.000000        1.000000        1.000000        1.000000        1.000000        1.000000        1.000000
+K(-1)                       0.023032        0.043650       -0.015790       -0.013402        0.036433        0.001531       -0.016441
+I(-1)                       0.479401       -0.574228        4.119689        0.684859       -0.205458        0.279549       -1.118339
+A(-1)                       0.449200        0.615793        0.398621       -0.108286        0.557486       -0.283010        0.777821
+G(-1)                       0.422481       -0.506048       -0.380543        0.603544       -0.181063        0.289330       -0.742545
+epsA                        0.598934        0.821058        0.531495       -0.144381        0.743314       -0.377347        1.037095
+epsG                        0.105328       -0.126162       -0.094873        0.150469       -0.045141        0.072132       -0.185123
+
+
+THEORETICAL MOMENTS
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+YY             1.0000     1.0926     1.1937
+CC             1.0000     1.1841     1.4022
+II             1.0000     2.3872     5.6986
+HH             1.0000     0.3119     0.0973
+WW             1.0000     1.1300     1.2768
+RR             1.0000     0.5155     0.2657
+Q              1.0000     1.3535     1.8320
+
+
+
+VARIANCE DECOMPOSITION (in percent)
+        epsA    epsG
+YY     98.35    1.65
+CC     97.71    2.29
+II     96.91    3.09
+HH     57.99   42.01
+WW     99.55    0.45
+RR     96.43    3.57
+Q      96.91    3.09
+
+
+
+MATRIX OF CORRELATIONS
+Variables        YY      CC      II      HH      WW      RR       Q
+YY           1.0000  0.9143  0.8509  0.0207  0.9612 -0.8635  0.8048
+CC           0.9143  1.0000  0.6959 -0.3861  0.9906 -0.9652  0.9320
+II           0.8509  0.6959  1.0000  0.2202  0.7620 -0.6572  0.5599
+HH           0.0207 -0.3861  0.2202  1.0000 -0.2559  0.4159 -0.4675
+WW           0.9612  0.9906  0.7620 -0.2559  1.0000 -0.9496  0.9072
+RR          -0.8635 -0.9652 -0.6572  0.4159 -0.9496  1.0000 -0.9907
+Q            0.8048  0.9320  0.5599 -0.4675  0.9072 -0.9907  1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order          1       2       3       4       5
+YY        0.8304  0.6896  0.5733  0.4776  0.3990
+CC        0.7089  0.5114  0.3792  0.2920  0.2357
+II        0.9601  0.8759  0.7706  0.6590  0.5500
+HH        0.6703  0.4430  0.2881  0.1840  0.1153
+WW        0.7502  0.5725  0.4464  0.3572  0.2941
+RR        0.6664  0.4355  0.2773  0.1704  0.0993
+Q         0.6255  0.3719  0.2029  0.0928  0.0232
+Total computing time : 0h00m06s
