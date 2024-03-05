@@ -4,7 +4,7 @@ clc;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%OPTIONS TO BE CHANGED BY THE USER%%%%%%%%%%%%%%%%
 %RESULT_names={'RBC_results', 'RBC_MAprocess_2_results', 'RBC_MAprocess_3_results' }; %%EXACT NAMES OF THE RESULTS FILES TO LOAD
-RESULT_names={'RBC_JR_results_0', 'RBC_JR_results_1', 'RBC_JR_results_2' }; %%EXACT NAMES OF THE RESULTS FILES TO LOAD
+RESULT_names={'RBC_JR_4/Output/RBC_JR_4_results', 'RBC_JR_1/Output/RBC_JR_1_results', 'RBC_JR_0/Output/RBC_JR_0_results' }; %%EXACT NAMES OF THE RESULTS FILES TO LOAD
 lin_vs_nonlin=[0,0,0]; %=0 IF THE CORRESPONDING MODEL IN RESULT_NAMES IS NON-LINEAR, 1 IF IT IS LINEAR
 
 
