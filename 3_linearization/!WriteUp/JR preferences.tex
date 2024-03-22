@@ -1,0 +1,91 @@
+\documentclass[]{article}
+
+\usepackage{amsmath, amssymb, xcolor}
+\usepackage{stackengine}
+
+
+%opening
+\title{Linearize RBC model with JR preferences}
+\author{Zhihan Yu}
+
+
+\begin{document}
+\def\delequal{\mathrel{\ensurestackMath{\stackon[1pt]{=}{\scriptstyle\Delta}}}}
+\maketitle
+
+Suppose we are to linearize a standard RBC model with Jaimovich-Rebello (JR) Preferences. When there are no capital adjustment costs, the only changes that need to be implemented are marginal utility of consumption deviations and marginal utility of leisure deviations. Here, I write out the steps in excruciating detail.
+
+Given the JR preference: \[ U(C_t,L_t) = \frac{[(C_t - \chi C_{t-1})^{1-\varrho} (1-H_t)^\varrho]^{1-\sigma_c} - 1}{1-\sigma_c} \]
+
+we have marginal utility of consumption ($C_t$) and marginal utility of labor supply ($H_t$):
+\begin{align}
+	U_{C,t} &= (1-\varrho)[C_t-\chi C_{t-1}]^{(1-\varrho)(1-\sigma_c)-1} [1-H_t]^{\varrho(1-\sigma_c)} \label{eq:MUC}\\
+	U_{H,t} &= -\varrho[C_t-\chi C_{t-1}]^{(1-\varrho)(1-\sigma_c)} [1-H_t]^{\varrho(1-\sigma_c)-1} \label{eq:MUH}
+\end{align}
+
+\section{Linearize Marginal Utility of Consumption}
+Take $\ln$ of equation (\ref{eq:MUC}):
+
+\begin{align*}
+	\ln U_{C,t} &= \ln (1-\varrho) + [(1-\varrho)(1-\sigma_c)-1] \ln(C_t-\chi C_{t-1}) + \varrho (1-\sigma_c)\ln(1-H_t)\\
+	\ln U_{C} &= \ln (1-\varrho) + [(1-\varrho)(1-\sigma_c)-1] \ln(C-\chi C_{}) + \varrho (1-\sigma_c)\ln(1-H)
+\end{align*}
+
+\noindent Taking the difference yields the log-difference ($u_{c,t} \delequal \ln U_{C,t} - \ln U_{C}$):
+
+\begin{equation*}
+	\begin{split}
+	\ln U_{C,t} - \ln U_{C} = [(1-\varrho)(1-\sigma_c)-1] {\color{blue}[\ln(C_t-\chi C_{t-1}) -  \ln(C-\chi C)]} \\ 
+	+ [\varrho (1-\sigma_c)] {\color{teal}[\ln(1-H_t) -  \ln(1-H)]}.
+\end{split}
+\end{equation*}
+
+Define $f(C_t,C_{t-1}) \delequal \ln (C_t-\chi C_{t-1})$. Then by first order Taylor approximation, we have
+\begin{align*}
+	f(C_t, C_{t-1}) &\approx f(C,C) + \frac{\partial f}{\partial C_t}\Bigr|_{\substack{C,C}} (C_t-C) +  \frac{\partial f}{\partial C_{t}-1}\Bigr|_{\substack{C,C}} (C_{t-1}-C) \\
+	&=\ln(C-\chi C) + \frac{1}{C(1-\chi)}(C_t-C) + \frac{-\chi}{C(1-\chi)} (C_{t-1}-C)\\
+	&=\ln(C-\chi C) + \frac{1}{C(1-\chi)}(C_t-C){\color{lightgray}\frac{C}{C}} + \frac{-\chi}{C(1-\chi)} (C_{t-1}-C){\color{lightgray}\frac{C}{C}}\\
+\end{align*}
+\[ \implies {\color{blue}[\ln(C_t-\chi C_{t-1}) -  \ln(C-\chi C)] = \frac{c_t-\chi c_{t-1}}{1-\chi}}. \]
+
+Similarly, define $g(H_t)\delequal\ln(1-H_t)$. Then, by first order Taylor Approximation, we have
+\begin{align*}
+	g(H_t) &\approx g(H) + \frac{\partial g}{\partial H_t}\Bigr|_{\substack{H}} (H_t-H) \\
+	&=\ln(1-H) - \frac{1}{1-H}(H_t-H)\\
+	&=\ln(1-H) - \frac{1}{1-H}(H_t-H) {\color{lightgray}\frac{H}{H}}\\
+\end{align*}
+\[ \implies {\color{teal}[\ln(1-H_t) -  \ln(1-H)] = -\frac{H}{1-H}h_t}.\]
+
+\begin{center}
+\fbox{$u_{c,t} = [(1-\varrho)(1-\sigma_c)-1] \frac{c_t -\chi c_{t-1}}{1-\chi}-[\varrho(1-\sigma_c)]\frac{H}{1-H}h_t$.}
+\end{center}
+
+
+\section{Linearize Marginal Utility of Leisure}
+
+Take natural of equation (\ref{eq:MUH}), using the fact that $U_{H,t}=-U_{L,t}$:
+
+\begin{align*}
+	\ln U_{L,t} &= \ln \varrho + [(1-\varrho)(1-\sigma_c)]\ln(C_t-\chi C_{t-1}) + [\varrho (1-\sigma_c)-1]\ln (1-H_t)\\
+	\ln U_{L} &= \ln \varrho + [(1-\varrho)(1-\sigma_c)] \ln(C-\chi C_{}) + [\varrho (1-\sigma_c)-1]\ln(1-H)
+\end{align*}
+
+\noindent Taking the difference yields the log-difference ($u_{h,t} \delequal \ln U_{H,t} - \ln U_{H}$):
+
+\begin{equation*}
+	\begin{split}
+		\ln U_{L,t} - \ln U_{L} = [(1-\varrho)(1-\sigma_c)] {\color{blue}[\ln(C_t-\chi C_{t-1}) -  \ln(C-\chi C)]} \\ 
+		+ [\varrho (1-\sigma_c)-1] {\color{teal}[\ln(1-H_t) -  \ln(1-H)]}.
+	\end{split}
+\end{equation*}
+
+Using same method as before and substituting the colored terms, we get the log-linearized expression for marginal utility of leisure:
+\begin{equation*}
+	u_{l,t} = [(1-\varrho)(1-\sigma_c)] \frac{c_t -\chi c_{t-1}}{1-\chi}-[\varrho(1-\sigma_c)-1]\frac{H}{1-H}h_t
+\end{equation*}
+\begin{center}
+	\fbox{$u_{l,t} = u_{C,t} + \frac{c_t -\chi c_{t-1}}{1-\chi}+\frac{H}{1-H}h_t$.}
+\end{center}
+
+
+\end{document}
