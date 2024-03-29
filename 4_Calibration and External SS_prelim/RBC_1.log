@@ -1,0 +1,197 @@
+Starting Dynare (version 5.0).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 27 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+STEADY-STATE RESULTS:
+
+U      		 -0.61174
+UC     		 0.907345
+UH     		 -1.69657
+LAMBDA 		 0.99
+R      		 1.0101
+RK     		 1.0101
+rk     		 0.030303
+C      		 0.560945
+W      		 1.86982
+H      		 0.35
+Y      		 0.934908
+K      		 9.25559
+I      		 0.186982
+A      		 1
+G      		 0.186982
+tax    		 0.186982
+q      		 1
+KY     		 9.9
+IY     		 0.2
+CY     		 0.6
+RR     		 1
+YY     		 1
+CC     		 1
+HH     		 1
+WW     		 1
+II     		 1
+KK     		 1
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+            0.75             0.75                0
+            0.75             0.75                0
+           0.782            0.782                0
+          0.9652           0.9652                0
+           1.047            1.047                0
+           1.292            1.292                0
+       2.715e+16       -2.715e+16                0
+       1.701e+18       -1.701e+18                0
+
+
+There are 4 eigenvalue(s) larger than 1 in modulus 
+for 4 forward-looking variable(s)
+
+The rank condition is verified.
+
+
+MODEL SUMMARY
+
+  Number of variables:         27
+  Number of stochastic shocks: 2
+  Number of state variables:   4
+  Number of jumpers:           4
+  Number of static variables:  20
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables        epsA      epsG
+epsA         1.000000  0.000000
+epsG         0.000000  1.000000
+
+POLICY AND TRANSITION FUNCTIONS
+                                  YY              CC              II              HH              WW              RR               q
+Constant                    1.000295        0.999647        1.002536        1.000422        0.999874        0.999479        1.002167
+(correction)                0.000295       -0.000353        0.002536        0.000422       -0.000126       -0.000521        0.002167
+K(-1)                       0.023032        0.043650       -0.015790       -0.013402        0.036433        0.001531       -0.016441
+A(-1)                       0.449200        0.615793        0.398621       -0.108286        0.557486       -0.283010        0.777821
+G(-1)                       0.422481       -0.506048       -0.380543        0.603544       -0.181063        0.289330       -0.742545
+I(-1)                       0.479401       -0.574228        4.119689        0.684859       -0.205458        0.279549       -1.118339
+epsA                        0.005989        0.008211        0.005315       -0.001444        0.007433       -0.003773        0.010371
+epsG                        0.001053       -0.001262       -0.000949        0.001505       -0.000451        0.000721       -0.001851
+K(-1),K(-1)                -0.000957       -0.001506       -0.000266        0.000845       -0.001314        0.000046        0.000579
+A(-1),K(-1)                 0.015376        0.019652        0.017926        0.008637        0.018155        0.003753       -0.021338
+A(-1),A(-1)                -0.145035       -0.097609       -0.432348        0.029541       -0.114208        0.200888       -0.040566
+G(-1),K(-1)                -0.002243       -0.001047       -0.008073       -0.025193       -0.001465       -0.012485        0.038593
+G(-1),A(-1)                 0.059328       -0.101227        0.600320       -0.251713       -0.045033       -0.333085       -0.254485
+G(-1),G(-1)                -0.267016        0.403894        0.134712       -0.326812        0.169075        0.252355        0.504484
+I(-1),K(-1)                -0.009331        0.006941       -0.067476       -0.038282        0.001246       -0.012463        0.088983
+I(-1),A(-1)                 0.336076       -0.436781        2.990723        0.098310       -0.166281       -0.428634       -1.151339
+I(-1),G(-1)                -0.254289        0.495361       -2.757525       -0.239267        0.232983        0.348840        1.262675
+I(-1),I(-1)                -0.493757        0.699661       -4.567767       -0.635012        0.281965        0.481398        1.916713
+epsA,epsA                   0.000014        0.000037       -0.000041       -0.000004        0.000029        0.000011        0.000062
+epsG,epsA                   0.000002       -0.000003        0.000020       -0.000008       -0.000001       -0.000011       -0.000008
+epsG,epsG                   0.000005       -0.000006       -0.000005        0.000008       -0.000002        0.000006       -0.000009
+K(-1),epsA                  0.000205        0.000262        0.000239        0.000115        0.000242        0.000050       -0.000285
+K(-1),epsG                 -0.000006       -0.000003       -0.000020       -0.000063       -0.000004       -0.000031        0.000096
+A(-1),epsA                  0.002122        0.005608       -0.006214       -0.000656        0.004388        0.001584        0.009289
+A(-1),epsG                  0.000148       -0.000252        0.001497       -0.000628       -0.000112       -0.000830       -0.000634
+G(-1),epsA                  0.000791       -0.001350        0.008004       -0.003356       -0.000600       -0.004441       -0.003393
+G(-1),epsG                  0.004302       -0.004733       -0.004402        0.006418       -0.001571        0.005116       -0.007385
+I(-1),epsA                  0.004481       -0.005824        0.039876        0.001311       -0.002217       -0.005715       -0.015351
+I(-1),epsG                 -0.000634        0.001235       -0.006875       -0.000597        0.000581        0.000870        0.003148
+
+
+APPROXIMATED THEORETICAL MOMENTS
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+YY             1.0023     0.0109     0.0001
+CC             1.0017     0.0118     0.0001
+II             1.0067     0.0239     0.0006
+HH             1.0005     0.0031     0.0000
+WW             1.0019     0.0113     0.0001
+RR             0.9999     0.0052     0.0000
+q              0.9999     0.0135     0.0002
+
+
+
+APPROXIMATED VARIANCE DECOMPOSITION (in percent)
+        epsA    epsG
+YY     98.35    1.65
+CC     97.71    2.29
+II     96.91    3.09
+HH     57.99   42.01
+WW     99.55    0.45
+RR     96.43    3.57
+q      96.91    3.09
+
+
+
+APPROXIMATED MATRIX OF CORRELATIONS
+Variables        YY      CC      II      HH      WW      RR       q
+YY           1.0000  0.9143  0.8509  0.0207  0.9612 -0.8635  0.8048
+CC           0.9143  1.0000  0.6959 -0.3861  0.9906 -0.9652  0.9320
+II           0.8509  0.6959  1.0000  0.2202  0.7620 -0.6572  0.5599
+HH           0.0207 -0.3861  0.2202  1.0000 -0.2559  0.4159 -0.4675
+WW           0.9612  0.9906  0.7620 -0.2559  1.0000 -0.9496  0.9072
+RR          -0.8635 -0.9652 -0.6572  0.4159 -0.9496  1.0000 -0.9907
+q            0.8048  0.9320  0.5599 -0.4675  0.9072 -0.9907  1.0000
+
+
+
+APPROXIMATED COEFFICIENTS OF AUTOCORRELATION
+Order          1       2       3       4       5
+YY        0.8304  0.6896  0.5733  0.4776  0.3990
+CC        0.7089  0.5114  0.3792  0.2920  0.2357
+II        0.9601  0.8759  0.7706  0.6590  0.5500
+HH        0.6703  0.4430  0.2881  0.1840  0.1153
+WW        0.7502  0.5725  0.4464  0.3572  0.2941
+RR        0.6664  0.4355  0.2773  0.1704  0.0993
+q         0.6255  0.3719  0.2029  0.0928  0.0232
+MODEL_DIAGNOSTICS:  The Jacobian of the static model is singular
+MODEL_DIAGNOSTICS:  there is 2 colinear relationships between the variables and the equations
+Relation 1
+Colinear variables:
+U
+UC
+UH
+C
+W
+H
+Y
+K
+I
+A
+G
+tax
+CY
+Relation 2
+Colinear variables:
+U
+UC
+UH
+C
+W
+H
+Y
+K
+I
+A
+G
+tax
+CY
+Relation 1
+Colinear equations
+    16    17
+
+Relation 2
+Colinear equations
+    16    17
+
+MODEL_DIAGNOSTICS:  The presence of a singularity problem typically indicates that there is one
+MODEL_DIAGNOSTICS:  redundant equation entered in the model block, while another non-redundant equation
+MODEL_DIAGNOSTICS:  is missing. The problem often derives from Walras Law.
+Total computing time : 0h00m17s

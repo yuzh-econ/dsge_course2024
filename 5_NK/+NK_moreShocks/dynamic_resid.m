@@ -1,0 +1,243 @@
+function residual = dynamic_resid(T, y, x, params, steady_state, it_, T_flag)
+% function residual = dynamic_resid(T, y, x, params, steady_state, it_, T_flag)
+%
+% File created by Dynare Preprocessor from .mod file
+%
+% Inputs:
+%   T             [#temp variables by 1]     double   vector of temporary terms to be filled by function
+%   y             [#dynamic variables by 1]  double   vector of endogenous variables in the order stored
+%                                                     in M_.lead_lag_incidence; see the Manual
+%   x             [nperiods by M_.exo_nbr]   double   matrix of exogenous variables (in declaration order)
+%                                                     for all simulation periods
+%   steady_state  [M_.endo_nbr by 1]         double   vector of steady state values
+%   params        [M_.param_nbr by 1]        double   vector of parameter values in declaration order
+%   it_           scalar                     double   time period for exogenous variables for which
+%                                                     to evaluate the model
+%   T_flag        boolean                    boolean  flag saying whether or not to calculate temporary terms
+%
+% Output:
+%   residual
+%
+
+if T_flag
+    T = NK_moreShocks.dynamic_resid_tt(T, y, x, params, steady_state, it_);
+end
+residual = zeros(72, 1);
+lhs = y(91);
+rhs = (steady_state(72));
+residual(1) = lhs - rhs;
+lhs = y(20);
+rhs = T(4)*y(78);
+residual(2) = lhs - rhs;
+lhs = y(21);
+rhs = T(6)*T(7);
+residual(3) = lhs - rhs;
+lhs = y(22);
+rhs = T(9)*T(10);
+residual(4) = lhs - rhs;
+lhs = y(23);
+rhs = y(21)*params(4)/y(1);
+residual(5) = lhs - rhs;
+lhs = y(93)*y(92);
+rhs = 1;
+residual(6) = lhs - rhs;
+lhs = y(24);
+rhs = y(8)/y(45);
+residual(7) = lhs - rhs;
+lhs = y(44);
+rhs = y(43)/y(98);
+residual(8) = lhs - rhs;
+lhs = (-y(22))/y(21);
+rhs = y(27);
+residual(9) = lhs - rhs;
+lhs = y(52);
+rhs = params(11)*T(11)*y(10)+(1-params(11))*T(12)^(-params(2));
+residual(10) = lhs - rhs;
+lhs = y(29);
+rhs = T(13)*T(14)/y(52);
+residual(11) = lhs - rhs;
+lhs = y(25);
+rhs = (y(52)*y(29)*(1-params(3))*y(30)/y(3)+(1-params(5))*y(41))/y(7);
+residual(12) = lhs - rhs;
+lhs = y(41)*(1-y(39)-y(42)*y(40))+y(92)*y(96)*y(95)*T(15);
+rhs = 1;
+residual(13) = lhs - rhs;
+lhs = y(92)*y(94);
+rhs = 1;
+residual(14) = lhs - rhs;
+lhs = y(30)*y(52)*y(29)*params(3)/y(28);
+rhs = y(27);
+residual(15) = lhs - rhs;
+lhs = y(29);
+rhs = y(26)+y(35)+y(32);
+residual(16) = lhs - rhs;
+lhs = y(31);
+rhs = (1-y(39))*y(32)*y(77)+y(3)*(1-params(5));
+residual(17) = lhs - rhs;
+lhs = y(42);
+rhs = y(32)/y(4);
+residual(18) = lhs - rhs;
+lhs = y(39);
+rhs = params(10)*(y(42)-1)^2;
+residual(19) = lhs - rhs;
+lhs = y(40);
+rhs = (y(42)-1)*2*params(10);
+residual(20) = lhs - rhs;
+lhs = y(35);
+rhs = y(33);
+residual(21) = lhs - rhs;
+lhs = y(47)-params(4)*params(11)*y(99);
+rhs = y(21)*y(29);
+residual(22) = lhs - rhs;
+lhs = y(49)-params(4)*params(11)*y(100);
+rhs = y(21)*T(17)*y(46)*y(53);
+residual(23) = lhs - rhs;
+lhs = y(48);
+rhs = y(47)*T(18);
+residual(24) = lhs - rhs;
+lhs = y(50);
+rhs = T(11)*y(49);
+residual(25) = lhs - rhs;
+lhs = 1;
+rhs = params(11)*T(18)+(1-params(11))*T(12)^(1-params(2));
+residual(26) = lhs - rhs;
+lhs = y(51);
+rhs = y(45)/T(19);
+residual(27) = lhs - rhs;
+lhs = log(y(43)/(steady_state(24)));
+rhs = params(12)*log(y(8)/(steady_state(24)))+(1-params(12))*params(13)*log(y(45)/(steady_state(26)))+(1-params(12))*params(14)*log(y(29)/(steady_state(10)))+params(24)*x(it_, 4);
+residual(28) = lhs - rhs;
+lhs = y(46);
+rhs = y(30);
+residual(29) = lhs - rhs;
+lhs = log(y(34))-log((steady_state(15)));
+rhs = params(7)*(log(y(5))-log((steady_state(15))))+params(21)*x(it_, 1);
+residual(30) = lhs - rhs;
+lhs = log(y(35))-log((steady_state(16)));
+rhs = params(8)*(log(y(6))-log((steady_state(16))))+params(22)*x(it_, 2);
+residual(31) = lhs - rhs;
+lhs = log(y(58))-log((steady_state(39)));
+rhs = params(22)*x(it_, 2)+params(8)*(log(y(13))-log((steady_state(39))));
+residual(32) = lhs - rhs;
+lhs = log(y(53))-log((steady_state(34)));
+rhs = params(15)*(log(y(11))-log((steady_state(34))))+params(23)*x(it_, 3);
+residual(33) = lhs - rhs;
+lhs = log(y(78))-log((steady_state(59)));
+rhs = params(19)*(log(y(19))-log((steady_state(59))))+params(25)*x(it_, 6);
+residual(34) = lhs - rhs;
+lhs = log(y(77))-log((steady_state(58)));
+rhs = params(20)*(log(y(18))-log((steady_state(58))))+params(26)*x(it_, 5);
+residual(35) = lhs - rhs;
+lhs = y(82);
+rhs = y(29)/(steady_state(10));
+residual(36) = lhs - rhs;
+lhs = y(87);
+rhs = y(31)/(steady_state(12));
+residual(37) = lhs - rhs;
+lhs = y(86);
+rhs = y(32)/(steady_state(13));
+residual(38) = lhs - rhs;
+lhs = y(83);
+rhs = y(26)/(steady_state(7));
+residual(39) = lhs - rhs;
+lhs = y(85);
+rhs = y(27)/(steady_state(8));
+residual(40) = lhs - rhs;
+lhs = y(84);
+rhs = y(28)/(steady_state(9));
+residual(41) = lhs - rhs;
+lhs = y(88);
+rhs = y(41)/(steady_state(22));
+residual(42) = lhs - rhs;
+lhs = y(79);
+rhs = y(24)/(steady_state(5));
+residual(43) = lhs - rhs;
+lhs = y(81);
+rhs = y(44)/(steady_state(25));
+residual(44) = lhs - rhs;
+lhs = y(80);
+rhs = y(43)/(steady_state(24));
+residual(45) = lhs - rhs;
+lhs = y(89);
+rhs = y(45)/(steady_state(26));
+residual(46) = lhs - rhs;
+lhs = y(90);
+rhs = y(76)/(steady_state(57));
+residual(47) = lhs - rhs;
+lhs = y(36);
+rhs = y(31)/y(29);
+residual(48) = lhs - rhs;
+lhs = y(37);
+rhs = y(32)/y(29);
+residual(49) = lhs - rhs;
+lhs = y(38);
+rhs = y(26)/y(29);
+residual(50) = lhs - rhs;
+lhs = y(54);
+rhs = (T(22)^(1-params(6))-1)/(1-params(6));
+residual(51) = lhs - rhs;
+lhs = y(55);
+rhs = T(24)*T(25);
+residual(52) = lhs - rhs;
+lhs = y(56);
+rhs = T(27)*T(28);
+residual(53) = lhs - rhs;
+lhs = y(70);
+rhs = params(4)*y(55)/y(12);
+residual(54) = lhs - rhs;
+lhs = y(57)*y(101);
+rhs = 1;
+residual(55) = lhs - rhs;
+lhs = (-y(56))/y(55);
+rhs = y(64);
+residual(56) = lhs - rhs;
+lhs = y(61);
+rhs = T(29)*T(30);
+residual(57) = lhs - rhs;
+lhs = y(71);
+rhs = (y(61)*(1-params(3))*y(59)/y(14)+(1-params(5))*y(74))/y(17);
+residual(58) = lhs - rhs;
+lhs = y(74)*(1-y(72)-y(75)*y(73))+y(101)*y(104)*y(103)*T(31);
+rhs = 1;
+residual(59) = lhs - rhs;
+lhs = y(101)*y(102);
+rhs = 1;
+residual(60) = lhs - rhs;
+lhs = y(59)*params(3)*y(61)/y(60);
+rhs = y(64);
+residual(61) = lhs - rhs;
+lhs = y(61);
+rhs = y(58)+y(65)+y(63);
+residual(62) = lhs - rhs;
+lhs = y(62);
+rhs = (1-y(72))*y(63)+(1-params(5))*y(14);
+residual(63) = lhs - rhs;
+lhs = y(75);
+rhs = y(63)/y(15);
+residual(64) = lhs - rhs;
+lhs = y(72);
+rhs = params(10)*(y(75)-1)^2;
+residual(65) = lhs - rhs;
+lhs = y(73);
+rhs = 2*params(10)*(y(75)-1);
+residual(66) = lhs - rhs;
+lhs = y(69);
+rhs = y(58);
+residual(67) = lhs - rhs;
+lhs = y(59);
+rhs = 1-1/params(2);
+residual(68) = lhs - rhs;
+lhs = y(76);
+rhs = y(61)/y(29);
+residual(69) = lhs - rhs;
+lhs = y(66);
+rhs = y(62)/y(61);
+residual(70) = lhs - rhs;
+lhs = y(67);
+rhs = y(63)/y(61);
+residual(71) = lhs - rhs;
+lhs = y(68);
+rhs = y(65)/y(61);
+residual(72) = lhs - rhs;
+
+end
