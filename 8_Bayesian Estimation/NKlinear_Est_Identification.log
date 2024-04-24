@@ -1,0 +1,177 @@
+Starting Dynare (version 5.0).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 35 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 2).
+Computing static model derivatives w.r.t. parameters (order 2).
+Computing dynamic model derivatives (order 2).
+Computing dynamic model derivatives w.r.t. parameters (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : UCF
+Equation number 2 : 0 : 2
+Equation number 3 : 0 : ULF
+Equation number 4 : 0 : WF
+Equation number 5 : 0 : YF
+Equation number 6 : 0 : 6
+Equation number 7 : 0 : 7
+Equation number 8 : 0 : KF
+Equation number 9 : 0 : XF
+Equation number 10 : 0 : RF
+Equation number 11 : 0 : 11
+Equation number 12 : 0 : GF
+Equation number 13 : 0 : 13
+Equation number 14 : 0 : UC
+Equation number 15 : 0 : 15
+Equation number 16 : 0 : UL
+Equation number 17 : 0 : W
+Equation number 18 : 0 : Y
+Equation number 19 : 0 : YW
+Equation number 20 : 0 : MC
+Equation number 21 : 0 : 21
+Equation number 22 : 0 : K
+Equation number 23 : 0 : X
+Equation number 24 : 0 : R
+Equation number 25 : 0 : 25
+Equation number 26 : 0 : G
+Equation number 27 : 0 : PIE
+Equation number 28 : 0 : Rn
+Equation number 29 : 0 : 29
+Equation number 30 : 0 : A
+Equation number 31 : 0 : 31
+Equation number 32 : 0 : MS
+Equation number 33 : 0 : robs
+Equation number 34 : 0 : dy
+Equation number 35 : 0 : pinfobs
+
+
+
+STEADY-STATE RESULTS:
+
+UC      		 0
+UL      		 0
+R       		 0
+H       		 0
+W       		 0
+YW      		 0
+Y       		 0
+K       		 0
+I       		 0
+tax     		 0
+C       		 0
+A       		 0
+G       		 0
+X       		 0
+Q       		 0
+PIE     		 0
+MC      		 0
+Rn      		 0
+UCF     		 0
+CF      		 0
+HF      		 0
+RF      		 0
+ULF     		 0
+WF      		 0
+YF      		 0
+KF      		 0
+IF      		 0
+GF      		 0
+XF      		 0
+QF      		 0
+taxF    		 0
+MS      		 0
+robs    		 1.51515
+dy      		 0.4
+pinfobs 		 1.005
+MODEL_DIAGNOSTICS:  No obvious problems with this mod-file were detected.
+
+======== Identification Analysis ========
+
+Testing prior mean
+WARNING: Komunjer and Ng (2011) failed:
+       There are more shocks and measurement errors than observables, this is not implemented (yet).
+       Skip identification analysis based on minimal state space system.
+The number of moments with non-zero derivative is smaller than the number of parameters
+Try increasing ar = 2
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 robust
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the Jacobian of steady state and reduced-form solution matrices (rank(Tau) is full with tol = robust).
+
+SPECTRUM (QU AND TKACHENKO, 2012):
+    All parameters are identified in the Jacobian of mean and spectrum (rank(Gbar) is full with tol = robust).
+
+MOMENTS (ISKREV, 2010):
+    All parameters are identified in the Jacobian of first two moments (rank(J) is full with tol = robust).
+
+
+Collinearity patterns with 1 parameter(s)
+Parameter       [ Expl. params   ]       cosn
+SE_epsA         [ SE_epsMS       ]      0.9902140
+SE_epsG         [ rhoG           ]      0.7737125
+SE_epsM         [ theta_pie      ]      0.9522098
+SE_epsMS        [ SE_epsA        ]      0.9902140
+rhoA            [ rhoMS          ]      0.9810056
+rhoG            [ SE_epsG        ]      0.7737125
+rhoMS           [ rhoA           ]      0.9810056
+hss             [ sigma_c        ]      0.9781035
+phiX            [ sigma_c        ]      0.7199977
+sigma_c         [ hss            ]      0.9781035
+chi             [ rhoG           ]      0.5900177
+xi              [ alp            ]      0.8890475
+gammap          [ rhoA           ]      0.5649690
+alp             [ xi             ]      0.8890475
+theta_pie       [ rho_r          ]      0.9937324
+rho_r           [ theta_pie      ]      0.9937324
+theta_y         [ theta_pie      ]      0.9896975
+conspie         [ --             ]      0.0000000
+trend           [ --             ]      0.0000000
+consr           [ --             ]      0.0000000
+
+Collinearity patterns with 2 parameter(s)
+Parameter       [ Expl. params                   ]       cosn
+SE_epsA         [ SE_epsMS        hss            ]      0.9957262
+SE_epsG         [ rhoG            sigma_c        ]      0.9285319
+SE_epsM         [ phiX            rho_r          ]      0.9645149
+SE_epsMS        [ SE_epsA         hss            ]      0.9943278
+rhoA            [ rhoMS           xi             ]      0.9936396
+rhoG            [ SE_epsG         sigma_c        ]      0.8953769
+rhoMS           [ rhoA            xi             ]      0.9940179
+hss             [ sigma_c         xi             ]      0.9949907
+phiX            [ sigma_c         chi            ]      0.8784767
+sigma_c         [ SE_epsG         hss            ]      0.9926406
+chi             [ SE_epsG         phiX           ]      0.8908298
+xi              [ hss             sigma_c        ]      0.9524098
+gammap          [ SE_epsA         xi             ]      0.7952389
+alp             [ hss             sigma_c        ]      0.9392644
+theta_pie       [ rho_r           theta_y        ]      0.9993940
+rho_r           [ hss             theta_pie      ]      0.9983277
+theta_y         [ theta_pie       rho_r          ]      0.9971228
+conspie         [ --              --             ]      0.0000000
+trend           [ --              --             ]      0.0000000
+consr           [ --              --             ]      0.0000000
+
+Plotting advanced diagnostics
+
+
+==== Identification analysis completed ====
+
+Total computing time : 0h00m28s
