@@ -1,0 +1,295 @@
+Starting Dynare (version 5.0).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 35 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+
+Initial value of the log posterior (or likelihood): -33.6792
+-----------------
+f at the beginning of new iteration,        33.6792299967
+Predicted improvement:        0.000000004
+lambda =          1; f =           33.6792300
+lambda =     1.9332; f =           33.6792300
+lambda =     1.3017; f =           33.6792300
+lambda =     1.0267; f =           33.6792300
+lambda =     1.1838; f =           33.6792300
+Norm of dx 8.5188e-07
+----
+Improvement on iteration 1 =        0.000000007
+improvement < crit termination
+warning: possible inaccuracy in H matrix
+
+Final value of minus the log posterior (or likelihood):33.679230 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+          prior mean     mode    s.d.  prior pstdev
+
+rhoA          0.5000   0.8429  0.0457   beta 0.2000 
+rhoG          0.5000   0.2519  0.1738   beta 0.2000 
+rhoMS         0.5000   0.9870  0.0096   beta 0.2000 
+hss           0.4000   0.3333  0.1171   beta 0.1000 
+phiX          2.0000   1.8606  0.9161   norm 1.5000 
+sigma_c       2.0000   1.6213  0.4264   gamm 0.5000 
+chi           0.7000   0.8767  0.0643   beta 0.1000 
+xi            0.5000   0.7797  0.0430   beta 0.1000 
+gammap        0.5000   0.1659  0.0807   beta 0.1500 
+alp           0.7000   0.6946  0.0483   beta 0.0500 
+theta_pie     2.0000   2.0485  0.2207   norm 0.2500 
+rho_r         0.7500   0.8213  0.0259   beta 0.1000 
+theta_y       0.1250   0.0030  0.0080   norm 0.0500 
+conspie       0.6250   0.6483  0.0913   gamm 0.1000 
+trend         0.4000   0.5057  0.1062   norm 0.1000 
+consr         1.5000   1.3546  0.0856   norm 0.1000 
+
+standard deviation of shocks
+          prior mean     mode    s.d.  prior pstdev
+
+epsA          0.1000   1.2310  0.2597   invg 2.0000 
+epsG          0.1000   1.1997  0.1879   invg 2.0000 
+epsM          0.1000   0.1520  0.0135   invg 2.0000 
+epsMS         0.1000   2.0673  0.4905   invg 2.0000 
+
+
+Log data density [Laplace approximation] is -69.085184.
+
+Estimation::mcmc: One Chain mode.
+Estimation::mcmc: Old mh-files successfully erased!
+Estimation::mcmc: Old metropolis.log file successfully erased!
+Estimation::mcmc: Creation of a new metropolis.log file.
+Estimation::mcmc: Initialization at the posterior mode.
+
+Estimation::mcmc: Write details about the MCMC... Ok!
+Estimation::mcmc: Details about the MCMC are available in NKlinear_Est_All/metropolis/NKlinear_Est_All_mh_history_0.mat
+
+
+Estimation::mcmc: Number of mh files: 1 per block.
+Estimation::mcmc: Total number of generated files: 1.
+Estimation::mcmc: Total number of iterations: 10000.
+Estimation::mcmc: Current acceptance ratio per chain: 
+                                                       Chain  1: 36.63%
+Estimation::mcmc: Total number of MH draws per chain: 10000.
+Estimation::mcmc: Total number of generated MH files: 1.
+Estimation::mcmc: I'll use mh-files 1 to 1.
+Estimation::mcmc: In MH-file number 1 I'll start at line 2001.
+Estimation::mcmc: Finally I keep 8000 draws per chain.
+
+
+
+MCMC Inefficiency factors per block
+Parameter       Block 1
+SE_epsA         280.030
+SE_epsG         105.677
+SE_epsM         101.312
+SE_epsMS        243.450
+rhoA            344.054
+rhoG            140.552
+rhoMS           278.014
+hss             198.938
+phiX             92.231
+sigma_c         113.225
+chi              52.486
+xi              219.624
+gammap          223.592
+alp             111.696
+theta_pie       157.898
+rho_r            71.617
+theta_y         553.080
+conspie          94.973
+trend           155.327
+consr            63.266
+
+
+Geweke (1992) Convergence Tests, based on means of draws 2000 to 3600 vs 6000 to 10000.
+p-values are for Chi2-test for equality of means.
+Parameter         Post. Mean        Post. Std   p-val No Taper   p-val 4% Taper   p-val 8% Taper  p-val 15% Taper
+SE_epsA                1.421            0.315            0.000            0.126            0.234            0.311
+SE_epsG                1.262            0.218            0.000            0.547            0.615            0.646
+SE_epsM                0.157            0.015            0.000            0.109            0.152            0.139
+SE_epsMS               2.390            0.619            0.000            0.002            0.010            0.014
+rhoA                   0.804            0.075            0.000            0.001            0.012            0.030
+rhoG                   0.340            0.182            0.000            0.493            0.531            0.565
+rhoMS                  0.977            0.015            0.009            0.761            0.801            0.819
+hss                    0.350            0.106            0.000            0.003            0.016            0.046
+phiX                   2.075            0.831            0.000            0.029            0.049            0.082
+sigma_c                1.759            0.407            0.000            0.584            0.602            0.569
+chi                    0.841            0.063            0.007            0.690            0.713            0.714
+xi                     0.784            0.046            0.000            0.127            0.178            0.182
+gammap                 0.254            0.125            0.000            0.151            0.241            0.255
+alp                    0.686            0.053            0.000            0.596            0.663            0.681
+theta_pie              2.146            0.215            0.000            0.001            0.006            0.011
+rho_r                  0.821            0.025            0.010            0.693            0.714            0.712
+theta_y                0.002            0.020            0.000            0.118            0.247            0.363
+conspie                0.663            0.080            0.000            0.377            0.420            0.431
+trend                  0.498            0.089            0.000            0.122            0.199            0.241
+consr                  1.355            0.075            0.000            0.039            0.068            0.075
+
+
+Estimation::marginal density: I'm computing the posterior mean and covariance...  Done!
+Estimation::marginal density: I'm computing the posterior log marginal density (modified harmonic mean)... 
+Estimation::marginal density: The support of the weighting density function is not large enough...
+Estimation::marginal density: I increase the variance of this distribution.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+
+Estimation::marginal density: Let me try again.
+Estimation::marginal density: There's probably a problem with the modified harmonic mean estimator.
+
+
+ESTIMATION RESULTS
+
+Log data density is -60.273657.
+
+parameters
+            prior mean   post. mean        90% HPD interval    prior       pstdev
+
+rhoA             0.500       0.8028      0.6868      0.9259     beta       0.2000
+rhoG             0.500       0.3430      0.0699      0.6410     beta       0.2000
+rhoMS            0.500       0.9751      0.9541      0.9973     beta       0.2000
+hss              0.400       0.3552      0.1822      0.5312     beta       0.1000
+phiX             2.000       2.0015      0.7659      3.2808     norm       1.5000
+sigma_c          2.000       1.7804      1.1478      2.4762     gamm       0.5000
+chi              0.700       0.8463      0.7521      0.9468     beta       0.1000
+xi               0.500       0.7836      0.7098      0.8579     beta       0.1000
+gammap           0.500       0.2601      0.0557      0.4600     beta       0.1500
+alp              0.700       0.6818      0.5974      0.7729     beta       0.0500
+theta_pie        2.000       2.1323      1.8091      2.5012     norm       0.2500
+rho_r            0.750       0.8196      0.7768      0.8583     beta       0.1000
+theta_y          0.125       0.0016     -0.0292      0.0372     norm       0.0500
+conspie          0.625       0.6608      0.5342      0.7873     gamm       0.1000
+trend            0.400       0.5082      0.3624      0.6432     norm       0.1000
+consr            1.500       1.3525      1.2261      1.4884     norm       0.1000
+
+standard deviation of shocks
+            prior mean   post. mean        90% HPD interval    prior       pstdev
+
+epsA             0.100       1.4042      0.9127      1.8975     invg       2.0000
+epsG             0.100       1.2673      0.8682      1.6077     invg       2.0000
+epsM             0.100       0.1576      0.1338      0.1835     invg       2.0000
+epsMS            0.100       2.3776      1.4168      3.3232     invg       2.0000
+
+MODEL SUMMARY
+
+  Number of variables:         35
+  Number of stochastic shocks: 4
+  Number of state variables:   13
+  Number of jumpers:           8
+  Number of static variables:  17
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables        epsA      epsG      epsM     epsMS
+epsA         1.971775  0.000000  0.000000  0.000000
+epsG         0.000000  1.606053  0.000000  0.000000
+epsM         0.000000  0.000000  0.024840  0.000000
+epsMS        0.000000  0.000000  0.000000  5.652911
+
+POLICY AND TRANSITION FUNCTIONS
+                                  dy         pinfobs            robs               Y               C               I             PIE              Rn
+Constant                    0.508244        0.660776        1.352545               0               0               0               0               0
+Y(-1)                      -1.000000               0               0               0               0               0               0               0
+K(-1)                       0.020377       -0.051391       -0.019762        0.020377        0.063999       -0.071997       -0.051391       -0.019762
+C(-1)                       0.449749        0.069760        0.026959        0.449749        0.845084       -0.153497        0.069760        0.026959
+A(-1)                       0.071926       -0.118358       -0.045566        0.071926        0.013287        0.283745       -0.118358       -0.045566
+G(-1)                       0.069058        0.007567        0.002930        0.069058        0.003852       -0.007697        0.007567        0.002930
+Rn(-1)                     -0.391137       -0.495815        0.628785       -0.391137       -0.352852       -0.833150       -0.495815        0.628785
+CF(-1)                      0.000111        0.000161       -0.000041        0.000111        0.000089        0.000263        0.000161       -0.000041
+KF(-1)                      0.000082        0.000241        0.000074        0.000082        0.000065        0.000197        0.000241        0.000074
+GF(-1)                      0.000007        0.000008       -0.000012        0.000007        0.000007        0.000015        0.000008       -0.000012
+MS(-1)                     -0.147277        0.045904        0.017615       -0.147277       -0.034784       -0.561830        0.045904        0.017615
+I(-1)                       0.185844        0.034731        0.013411        0.185844        0.005515        0.806046        0.034731        0.013411
+PIE(-1)                    -0.052298        0.183161        0.070437       -0.052298       -0.042818       -0.122430        0.183161        0.070437
+IF(-1)                      0.000048        0.000083       -0.000009        0.000048        0.000039        0.000112        0.000083       -0.000009
+epsA                        0.089596       -0.147434       -0.056759        0.089596        0.016551        0.353451       -0.147434       -0.056759
+epsG                        0.201374        0.022088        0.008507        0.201374        0.011251       -0.022399        0.022088        0.008507
+epsM                       -0.477225       -0.604943        0.767179       -0.477225       -0.430514       -1.016524       -0.604943        0.767179
+epsMS                      -0.151044        0.047078        0.018066       -0.151044       -0.035674       -0.576199        0.047078        0.018066
+
+
+THEORETICAL MOMENTS
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+dy             0.5082     0.7225     0.5220
+pinfobs        0.6608     0.3857     0.1488
+robs           1.3525     0.4358     0.1899
+Y              0.0000     8.8271    77.9179
+C              0.0000     8.2114    67.4277
+I              0.0000    21.8360   476.8117
+PIE            0.0000     0.3857     0.1488
+Rn             0.0000     0.4358     0.1899
+
+
+
+VARIANCE DECOMPOSITION (in percent)
+             epsA    epsG    epsM   epsMS
+dy           9.97   18.99    1.46   69.58
+pinfobs     48.36    0.64   15.38   35.62
+robs        31.70    0.21   10.56   57.52
+Y            1.79    0.09    0.06   98.05
+C            1.26    0.00    0.09   98.65
+I            2.40    0.00    0.03   97.56
+PIE         48.36    0.64   15.38   35.62
+Rn          31.70    0.21   10.56   57.52
+
+
+
+MATRIX OF CORRELATIONS
+Variables         dy  pinfobs     robs        Y        C        I      PIE       Rn
+dy            1.0000  -0.2180  -0.2806   0.0409  -0.1186   0.1725  -0.2180  -0.2806
+pinfobs      -0.2180   1.0000   0.4568   0.1274  -0.0390   0.2603   1.0000   0.4568
+robs         -0.2806   0.4568   1.0000   0.1775  -0.0545   0.3665   0.4568   1.0000
+Y             0.0409   0.1274   0.1775   1.0000   0.9087   0.9175   0.1274   0.1775
+C            -0.1186  -0.0390  -0.0545   0.9087   1.0000   0.6693  -0.0390  -0.0545
+I             0.1725   0.2603   0.3665   0.9175   0.6693   1.0000   0.2603   0.3665
+PIE          -0.2180   1.0000   0.4568   0.1274  -0.0390   0.2603   1.0000   0.4568
+Rn           -0.2806   0.4568   1.0000   0.1775  -0.0545   0.3665   0.4568   1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order           1       2       3       4       5       6       7       8       9      10
+dy         0.5813  0.4553  0.3261  0.2168  0.1328  0.0724  0.0312  0.0046 -0.0115 -0.0206
+pinfobs    0.6947  0.3900  0.1887  0.0771  0.0247  0.0067  0.0063  0.0134  0.0224  0.0304
+robs       0.9061  0.7832  0.6598  0.5507  0.4610  0.3906  0.3368  0.2960  0.2649  0.2405
+Y          0.9967  0.9894  0.9791  0.9666  0.9527  0.9379  0.9226  0.9071  0.8915  0.8760
+C          0.9994  0.9977  0.9952  0.9919  0.9879  0.9835  0.9785  0.9732  0.9674  0.9612
+I          0.9942  0.9795  0.9583  0.9325  0.9039  0.8734  0.8421  0.8106  0.7792  0.7483
+PIE        0.6947  0.3900  0.1887  0.0771  0.0247  0.0067  0.0063  0.0134  0.0224  0.0304
+Rn         0.9061  0.7832  0.6598  0.5507  0.4610  0.3906  0.3368  0.2960  0.2649  0.2405
+
+Total computing time : 0h02m23s

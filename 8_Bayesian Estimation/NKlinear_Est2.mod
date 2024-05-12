@@ -55,7 +55,7 @@ rhoA      = 0.7;
 rhoG      = 0.7;
 rhoMS      = 0.7;
 trend     = 0.4;
-ctrend    = 0.0;
+ctrend    = 0.4;
 PIEss=1.005; //2% inflation per year
 consr     = (1.0*PIEss/betta-1)*100; // ss nominal interest rate
 //to give prior about 1.5 
@@ -282,7 +282,7 @@ theta_y,         NORMAL_PDF,   0.125,0.05; //feedback output gap
 
 conspie,         GAMMA_PDF,    0.625,0.10; //quarterly ss inflation rate;
 trend,           NORMAL_PDF,   0.40, 0.10; //common quarterly trend growth rate
-ctrend,           uniform_pdf,   0.30, 0.10; //common quarterly consumption trend growth rate
+ctrend,           NORMAL_PDF,   0.40, 0.10; //common quarterly consumption trend growth rate
 consr,           NORMAL_PDF,    1.5,0.1;      //common quarterly nominal interest rate
 % the data for the mean can be obtained just by computing the mean of the acutal data
 % mean(robs), mean(dy), mean(pinfobs). The numbers that are set here come from Smets and Wouters
@@ -302,7 +302,7 @@ mode_compute=4, // the optimization procedure used.
 first_obs=143, //observed data you exclude for whatever reason (e.g. structural breaks)
 presample=4, // by default this number is zero. This value is to initialize the Kalman filter
 prefilter=0, // zero because data is not demeanded! For demeaned data you must set this to 1
-mh_replic=100000, // number of draws. The more draws the more precise, but it takes longer time.
+mh_replic=1000, // number of draws. The more draws the more precise, but it takes longer time.
 // usually you use much more draws (min. 100000). This here is just for exercise that it does not take too long
 mh_nblocks=2,
 mh_jscale=0.40, // c parameter (jumper)
